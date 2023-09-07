@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/*
+/**
  * factorial - prints the factorial of number
- * @x: variable for factotial value
+ * @x: variable for factorial value
  *
  * Return: total factorial value
  */
@@ -18,7 +18,7 @@ int factorial(int x)
 		return (x * factorial(x-1));
 }
 
-/*
+/**
  * main - entry point of program
  *
  * Return: 0 (Success)
