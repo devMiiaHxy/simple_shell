@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(void int ac, void char **argv)
+{
+	char* prompt = "ALX_SHELL$";
+
+	printf("%s", prompt);
+
+	char *say;
+
+	printf("%s", say);
+
+	free(say);
+
+	return (0);
+
+}
+
+

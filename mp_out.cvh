@@ -1,0 +1,3 @@
+#include main.h
+
+int mp_exit(
