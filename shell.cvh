@@ -1,21 +1,51 @@
+#include "main.h"
 #include <stdio.h>
+#include <unistd.h>
+#include <sys/wait.h>
 #include <stdlib.h>
 
+/**
+ * main - Entry point of alx project
+ * Return: 0 (Always success)
+ *
+ */
 
-int main(void int ac, void char **argv)
+int main()
 {
-	char* prompt = "ALX_SHELL$";
 
-	printf("%s", prompt);
+	pid_t pid;
+	int waiter;
 
-	char *say;
+	char *Shell_name = " PARALLAX-$ ";
+	printf("%s", Shell_name);
+	printf("\n");
 
-	printf("%s", say);
+	pid = fork();
+	if (pid == 0)
+	{
+	
+		char *var = ("/bin/sh");
+		char *path[] = {"/bin/sh", NULL};
+		char *envp[] = {NULL};
 
-	free(say);
+	if (execve(var, path, envp) == -1)
+	{
+		perror("Hmm, something's wrong");
+		exit(EXIT_FAILURE);
+	}
+
+	{
+		printf("%s", "error enc..");
+	}
+
+	}
+	else
+	{
+		wait(&waiter);
+		printf("done");
+		printf("\n");
+
+	}
 
 	return (0);
-
 }
-
-

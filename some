@@ -1,0 +1,27 @@
+#include "main.h"
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+char* _brk(char s[], char *t)
+{
+	t = strtok(s, " ");
+	while (t != NULL)
+	{
+		printf("%s\n", t);
+		t = strtok(NULL, " ");
+	}
+
+	return (t);
+}
+
+int main()
+{
+	char *t;
+	char name[] = "I am a boy";
+	
+	char *you =_brk(name, t);
+	/* printf("%s\n", you); */
+
+	return (0);
+}

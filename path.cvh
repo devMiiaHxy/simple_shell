@@ -1,0 +1,20 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(void)
+{
+	char *PATH = "home/ayotunde200/alx_shell/simple_shell";
+	/* char *env = getenv(PATH); */
+	int print = putenv(PATH);
+
+	printf("%u", print);
+	printf("\n");
+
+	/* random */
+
+
+	return (0);
+
+}

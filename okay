@@ -7,9 +7,9 @@
 int main ()
 {
 	size_t pid;
-	int  i;
+	/* int  i; */
 	int waiter;
-	char *content = NULL;
+	char *content;
 	/* char *tok; */
 	char *shell_name = "PARALLAX-SHELL$";
 
@@ -25,12 +25,16 @@ int main ()
 
 	 /* tok = strtok(content, "\0"); */
 	 /* pid = fork(); */
-	getline(&content, &x, stdin);
-	pid = fork();
+
+	 
+	 pid = fork();
+
 	if (pid == 0)
 	 {
-		 char *const argv[] = {"l", NULL};
+		 char *const argv[] = {NULL};
 		/* char *path = {"/usr/bin/ls"}; */
+		 getline(&content, &x, stdin);
+		 printf("%s", content);
 
 		 if (execve(content, argv, NULL) == -1)
 		 {
@@ -50,6 +54,8 @@ int main ()
 			 printf("done");
 			 printf("\n");
 		 }
+
+	 printf("%s", content);
 
 	/*  printf("%d", argc); */
 

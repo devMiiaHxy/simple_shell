@@ -1,0 +1,10 @@
+#include "main.h"
+
+int main()
+{
+	int *x = 23;
+
+	_print(x);
+
+	return (0);
+}
